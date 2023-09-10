@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block heading %}
+register
+{% endblock %}
+{% block body %}
+    <form method="post" action='{{ url_for("add_user") }}'>
+                    <input class="input is-large" type="text" name="id1" id="id1" placeholder="username" autofocus="">
+        
+                
+                    <input class="input is-large" type="text" name="name1"  id="name1"placeholder="Name">
+                
+                    <input class="input is-large" type="password" name="password1" id="password1" placeholder="Password">
+
+            <button class="button is-block is-info is-large is-fullwidth">Sign Up</button>
+    </form>
+    {% endblock %}

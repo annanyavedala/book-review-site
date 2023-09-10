@@ -1,0 +1,12 @@
+{% extends "layout.html"%}
+{% block heading%}
+search
+{% endblock %}
+
+{% block body %}
+<h1>SEARCH FOR THE BOOK</h1>
+<form action="{{ url_for('show')}}" method="post">
+		Enter the details of the book you are looking for<input type="text" name="details" id="details" placeholder="enter">
+<button>Click</button>
+</form>
+{% endblock %}

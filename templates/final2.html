@@ -1,0 +1,31 @@
+{% block heading%}
+final
+{% endblock %}
+
+{% block body %}
+<p>{{s.isbn}}</p><br>
+<p>{{s.title}}</p><br>
+<p>{{s.author}}</p><br>
+<p>{{s.year}}</p><br>
+
+REVIEWS:<br>
+
+{% for row in reviews_f %}
+<p>{{ row.review }}</p>
+{% endfor %}
+<form action="temp", method="post">
+	<!-- Enter the ID of the book you were looking for:<input type="text" name="final" id="final" placeholder="ID">
+
+	Enter your username<input type="text" name="check_username" id="check_username" placeholder="username">
+ -->
+	<!-- Enter your review<br><input type="hidden" name="review" id="review" placeholder="enter your review"> -->
+
+
+
+
+
+	<input type="hidden" name="isbn" value="{{s.isbn}}">
+	<input type="hidden" name="username" value="{{q}}">
+	
+</form>
+{% endblock %}
